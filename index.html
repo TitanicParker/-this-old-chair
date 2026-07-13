@@ -10,4 +10,518 @@
   <meta name="description" content="A story of pain, understanding, isolation, and what came to stand.">
   <link rel="canonical" href="https://titanicparker.github.io/-this-old-chair/">
 
-  <meta property="og:type
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Unshared Manifold">
+  <meta property="og:description" content="A story of pain, understanding, isolation, and what came to stand.">
+  <meta property="og:url" content="https://titanicparker.github.io/-this-old-chair/">
+  <meta property="og:image" content="https://titanicparker.github.io/-this-old-chair/this-old-chair.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="A worn chair beside a laptop in a room with cloud-patterned walls.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Unshared Manifold">
+  <meta name="twitter:description" content="A story of pain, understanding, isolation, and what came to stand.">
+  <meta name="twitter:image" content="https://titanicparker.github.io/-this-old-chair/this-old-chair.png">
+
+  <style>
+    :root {
+      --paper: #f4efe5;
+      --ink: #262421;
+      --muted: #6d675f;
+      --accent: #315864;
+      --line: rgba(38, 36, 33, .18);
+      --bar: rgba(244, 239, 229, .92);
+      --measure: 45rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #171a1b;
+        --ink: #eee9df;
+        --muted: #b6afa4;
+        --accent: #8ab6c2;
+        --line: rgba(238, 233, 223, .18);
+        --bar: rgba(23, 26, 27, .92);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; overflow: hidden; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button { font: inherit; }
+
+    .reader {
+      height: 100dvh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      overflow: hidden;
+    }
+
+    .topbar, .bottombar {
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+      background: var(--bar);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar {
+      min-height: 3.25rem;
+      padding-top: env(safe-area-inset-top);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .bottombar {
+      min-height: 3.75rem;
+      padding-bottom: env(safe-area-inset-bottom);
+      border-top: 1px solid var(--line);
+      justify-content: space-between;
+    }
+
+    .book-title {
+      min-width: 0;
+      font-family: system-ui, sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .chapter-label {
+      margin-left: auto;
+      min-width: 0;
+      color: var(--muted);
+      font-family: system-ui, sans-serif;
+      font-size: .78rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .viewport {
+      min-height: 0;
+      overflow: hidden;
+      touch-action: pan-y;
+    }
+
+    .track {
+      height: 100%;
+      display: flex;
+      transition: transform 360ms cubic-bezier(.22,.61,.36,1);
+      will-change: transform;
+    }
+
+    .page {
+      flex: 0 0 100%;
+      height: 100%;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+      scrollbar-gutter: stable;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+
+    .page-inner {
+      width: min(100%, var(--measure));
+      margin: 0 auto;
+      padding: clamp(2rem, 6vw, 5rem) clamp(1.15rem, 5vw, 2.4rem) 6rem;
+      font-size: clamp(1.08rem, .98rem + .42vw, 1.3rem);
+      line-height: 1.78;
+    }
+
+    .page-inner p { margin: 0 0 1.25em; }
+    .page-inner em { font-style: italic; }
+    .page-inner strong { font-weight: 700; }
+    .page-inner h1, .page-inner h2 {
+      margin: 0 0 1.25rem;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+    .page-inner h1 { font-size: clamp(2.2rem, 8vw, 5rem); }
+    .page-inner h2 { font-size: clamp(1.75rem, 5vw, 3.1rem); }
+    .page-inner blockquote {
+      margin: 2rem 0;
+      padding-left: 1.1rem;
+      border-left: 3px solid var(--accent);
+      color: var(--muted);
+    }
+    .page-inner .equation {
+      overflow-x: auto;
+      margin: 1.8rem 0;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: .5rem;
+      font-family: "Times New Roman", serif;
+      text-align: center;
+    }
+
+    .cover {
+      position: relative;
+      min-height: 100%;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      color: white;
+      background: #203840;
+    }
+    .cover picture, .cover img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .cover img { object-fit: cover; object-position: center; }
+    .cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,12,14,.9) 0%, rgba(8,12,14,.35) 48%, rgba(8,12,14,.08) 75%);
+    }
+    .cover-copy {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 62rem);
+      padding: clamp(2rem, 7vw, 5.5rem) clamp(1.25rem, 6vw, 5rem);
+      padding-bottom: max(3rem, calc(2rem + env(safe-area-inset-bottom)));
+    }
+    .cover h1 {
+      margin: 0;
+      max-width: 12ch;
+      font-size: clamp(3rem, 10vw, 7rem);
+      line-height: .92;
+      letter-spacing: -.035em;
+      text-wrap: balance;
+    }
+    .cover p {
+      max-width: 37rem;
+      margin: 1.25rem 0 0;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      line-height: 1.5;
+    }
+
+    .nav-button, .index-button {
+      min-width: 2.75rem;
+      min-height: 2.75rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .nav-button:disabled { opacity: .32; cursor: default; }
+    .counter {
+      font-family: system-ui, sans-serif;
+      font-size: .8rem;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+    .progress {
+      flex: 1;
+      height: 3px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: var(--line);
+    }
+    .progress > span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: var(--accent);
+      transition: width 240ms ease;
+    }
+
+    dialog {
+      width: min(92vw, 34rem);
+      max-height: 75dvh;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+      color: var(--ink);
+      background: var(--paper);
+      box-shadow: 0 24px 70px rgba(0,0,0,.32);
+    }
+    dialog::backdrop { background: rgba(0,0,0,.45); backdrop-filter: blur(3px); }
+    .toc-head {
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+      font-family: system-ui, sans-serif;
+      font-weight: 700;
+    }
+    .toc-list { padding: .5rem; }
+    .toc-list button {
+      width: 100%;
+      padding: .9rem 1rem;
+      border: 0;
+      border-radius: .5rem;
+      color: var(--ink);
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+    .toc-list button:hover, .toc-list button[aria-current="true"] {
+      background: color-mix(in srgb, var(--accent) 14%, transparent);
+    }
+
+    .loading, .error {
+      display: grid;
+      height: 100%;
+      place-items: center;
+      padding: 2rem;
+      font-family: system-ui, sans-serif;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .cover img { object-position: center center; }
+      .chapter-label { max-width: 46vw; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .track, .progress > span { transition: none; }
+      .page { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main class="reader" aria-label="The Unshared Manifold reader">
+    <header class="topbar">
+      <button class="index-button" id="tocOpen" aria-label="Open contents">☰</button>
+      <div class="book-title">The Unshared Manifold</div>
+      <div class="chapter-label" id="chapterLabel">Cover</div>
+    </header>
+
+    <div class="viewport" id="viewport">
+      <div class="track" id="track">
+        <section class="page" aria-label="Cover">
+          <div class="cover">
+            <picture>
+              <source media="(max-width: 700px)" srcset="My-friend-the-chair.png">
+              <img src="this-old-chair.png" alt="A worn chair beside a laptop in a room with cloud-patterned walls.">
+            </picture>
+            <div class="cover-copy">
+              <h1>The Unshared Manifold</h1>
+              <p>A story of pain, understanding, isolation, and what came to stand.</p>
+            </div>
+          </div>
+        </section>
+        <section class="page"><div class="loading">Loading the book…</div></section>
+      </div>
+    </div>
+
+    <footer class="bottombar">
+      <button class="nav-button" id="prev" aria-label="Previous section">←</button>
+      <span class="counter" id="counter">1 / 1</span>
+      <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+      <button class="nav-button" id="next" aria-label="Next section">→</button>
+    </footer>
+  </main>
+
+  <dialog id="toc">
+    <div class="toc-head">
+      <span>Contents</span>
+      <button class="index-button" id="tocClose" aria-label="Close contents">×</button>
+    </div>
+    <div class="toc-list" id="tocList"></div>
+  </dialog>
+
+  <script>
+    const track = document.getElementById('track');
+    const viewport = document.getElementById('viewport');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const counter = document.getElementById('counter');
+    const progressBar = document.getElementById('progressBar');
+    const chapterLabel = document.getElementById('chapterLabel');
+    const toc = document.getElementById('toc');
+    const tocList = document.getElementById('tocList');
+
+    let pages = [];
+    let titles = ['Cover'];
+    let current = Number.parseInt(localStorage.getItem('unshared-manifold-page') || '0', 10);
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+    }
+
+    function inlineMarkdown(text) {
+      return escapeHtml(text)
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>')
+        .replace(/`(.+?)`/g, '<code>$1</code>');
+    }
+
+    function renderMarkdown(markdown) {
+      const lines = markdown.replace(/^\uFEFF/, '').split(/\r?\n/);
+      let html = '';
+      let paragraph = [];
+      let inEquation = false;
+      let equation = [];
+
+      const flushParagraph = () => {
+        if (!paragraph.length) return;
+        html += `<p>${inlineMarkdown(paragraph.join(' '))}</p>`;
+        paragraph = [];
+      };
+
+      for (const raw of lines) {
+        const line = raw.trim();
+        if (line === '[' && !inEquation) {
+          flushParagraph();
+          inEquation = true;
+          equation = [];
+          continue;
+        }
+        if (line === ']' && inEquation) {
+          html += `<div class="equation">${inlineMarkdown(equation.join(' '))}</div>`;
+          inEquation = false;
+          continue;
+        }
+        if (inEquation) {
+          equation.push(line);
+          continue;
+        }
+        if (!line) {
+          flushParagraph();
+          continue;
+        }
+        if (/^#{1,2}\s+/.test(line)) {
+          flushParagraph();
+          const level = line.startsWith('##') ? 2 : 1;
+          html += `<h${level}>${inlineMarkdown(line.replace(/^#{1,2}\s+/, ''))}</h${level}>`;
+          continue;
+        }
+        if (line.startsWith('> ')) {
+          flushParagraph();
+          html += `<blockquote>${inlineMarkdown(line.slice(2))}</blockquote>`;
+          continue;
+        }
+        paragraph.push(line);
+      }
+      flushParagraph();
+      return html;
+    }
+
+    function splitSections(markdown) {
+      const clean = markdown.replace(/^\uFEFF/, '').trim();
+      const matches = [...clean.matchAll(/^##\s+(.+)$/gm)];
+      const sections = [];
+      const introEnd = matches.length ? matches[0].index : clean.length;
+      sections.push({ title: 'Introduction', content: clean.slice(0, introEnd).trim() });
+      matches.forEach((match, index) => {
+        const start = match.index;
+        const end = index + 1 < matches.length ? matches[index + 1].index : clean.length;
+        sections.push({ title: match[1].trim(), content: clean.slice(start, end).trim() });
+      });
+      return sections.filter(section => section.content);
+    }
+
+    function buildBook(markdown) {
+      const sections = splitSections(markdown);
+      track.querySelectorAll('.page:not(:first-child)').forEach(node => node.remove());
+      titles = ['Cover', ...sections.map(section => section.title)];
+
+      sections.forEach(section => {
+        const page = document.createElement('section');
+        page.className = 'page';
+        page.setAttribute('aria-label', section.title);
+        page.innerHTML = `<article class="page-inner">${renderMarkdown(section.content)}</article>`;
+        track.appendChild(page);
+      });
+
+      pages = [...track.querySelectorAll('.page')];
+      current = Math.min(Math.max(current, 0), pages.length - 1);
+      buildContents();
+      showPage(current, false);
+    }
+
+    function buildContents() {
+      tocList.innerHTML = '';
+      titles.forEach((title, index) => {
+        const button = document.createElement('button');
+        button.textContent = title;
+        button.addEventListener('click', () => {
+          showPage(index);
+          toc.close();
+        });
+        tocList.appendChild(button);
+      });
+    }
+
+    function showPage(index, animate = true) {
+      if (!pages.length) pages = [...track.querySelectorAll('.page')];
+      current = Math.min(Math.max(index, 0), pages.length - 1);
+      if (!animate) track.style.transition = 'none';
+      track.style.transform = `translate3d(${-current * 100}%, 0, 0)`;
+      if (!animate) requestAnimationFrame(() => track.style.transition = '');
+
+      counter.textContent = `${current + 1} / ${pages.length}`;
+      chapterLabel.textContent = titles[current] || '';
+      progressBar.style.width = `${pages.length > 1 ? (current / (pages.length - 1)) * 100 : 0}%`;
+      prev.disabled = current === 0;
+      next.disabled = current === pages.length - 1;
+      localStorage.setItem('unshared-manifold-page', String(current));
+
+      [...tocList.children].forEach((item, i) => item.setAttribute('aria-current', i === current ? 'true' : 'false'));
+      pages[current]?.focus({ preventScroll: true });
+    }
+
+    prev.addEventListener('click', () => showPage(current - 1));
+    next.addEventListener('click', () => showPage(current + 1));
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') showPage(current - 1);
+      if (event.key === 'ArrowRight' || event.key === 'PageDown') showPage(current + 1);
+    });
+
+    viewport.addEventListener('touchstart', event => {
+      const touch = event.changedTouches[0];
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', event => {
+      const touch = event.changedTouches[0];
+      const dx = touch.clientX - touchStartX;
+      const dy = touch.clientY - touchStartY;
+      if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.25) {
+        showPage(current + (dx < 0 ? 1 : -1));
+      }
+    }, { passive: true });
+
+    document.getElementById('tocOpen').addEventListener('click', () => toc.showModal());
+    document.getElementById('tocClose').addEventListener('click', () => toc.close());
+
+    fetch('./The%20Unshared%20Manifold.md')
+      .then(response => {
+        if (!response.ok) throw new Error(`Could not load the book (${response.status}).`);
+        return response.text();
+      })
+      .then(buildBook)
+      .catch(error => {
+        track.querySelector('.page:not(:first-child)').innerHTML = `<div class="error"><p>${escapeHtml(error.message)}</p></div>`;
+        pages = [...track.querySelectorAll('.page')];
+        showPage(0, false);
+      });
+  </script>
+</body>
+</html>
