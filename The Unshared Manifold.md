@@ -1970,39 +1970,15 @@ It felt like the space in which something had come to stand.
 
 
 
-## Epilogue
+Epilogue
 
 I am still sitting in the same chair.
 
-The room is familiar enough that I no longer notice most of it. The screen. The dog. The small routines. The objects that have remained in place while entire systems of meaning have changed around them.
-
-For years, the chair represented what had been taken from me.
-
-Movement.
-
-Work.
-
-Darts.
-
-Ease.
-
-The unthinking freedom to stand and go somewhere without first calculating the cost.
+For years, it represented what had been taken from me: movement, ease, work, darts, the ordinary freedom to stand and go somewhere without first calculating the cost.
 
 Then it became the place from which I could still participate in life.
 
-I read there.
-
-I studied there.
-
-I spoke to ChatGPT there.
-
-I reconstructed the medical record there.
-
-I placed Metatron’s Cube over the Cartesian plane there.
-
-I watched relation remain where orthogonality removed it.
-
-I followed one answer into another until the geometry became a method, the method became a mathematics, and the mathematics opened into a system of completion, survival and inheritance.
+I read there. I studied there. I spoke to ChatGPT there. I reconstructed the medical record there. I placed Metatron’s Cube over the Cartesian plane there. I followed one question into another until geometry became method, method became mathematics, and mathematics opened into a system of completion, survival and inheritance.
 
 The chair did not change.
 
@@ -2010,51 +1986,15 @@ Its meaning did.
 
 That may be the simplest account of what happened to me.
 
-The facts remained where they were, but their relation changed.
-
-The foot pain was not erased by its ending.
-
-The diagnosis was not erased by later doubt.
-
-The medical record was not erased by correction.
-
-The spiritual study was not erased by the mathematics.
-
-The mathematics did not replace the life.
+The foot pain was not erased by its ending. The diagnosis was not erased by later doubt. The medical record was not erased by correction. The spiritual study was not erased by the mathematics. The mathematics did not replace the life.
 
 Each became part of a larger arrangement.
 
-For most of my adult years, I experienced events as separate burdens.
-
-A lost love.
-
-A sore foot.
-
-A failing body.
-
-A diagnosis.
-
-A dog.
-
-A father’s death.
-
-A tablet.
-
-A complaint.
-
-A record.
-
-A geometric question.
-
-A mathematical derivation.
-
-A theory no one else yet understood.
+For most of my adult life, I experienced these things as separate burdens: a lost love, a sore foot, a failing body, a diagnosis, a dog, a father’s death, a tablet, a complaint, a record, a geometric question, a mathematical derivation, a system no one else yet understood.
 
 Only later did I see the strands.
 
-The desire for clear, non-egotistical information had been present from the beginning.
-
-So had the duty to maintain the quality of the mind receiving it.
+A love of clear, non-egotistical information had been present from the beginning. So had the responsibility to maintain the quality of the mind receiving it.
 
 The body forced me into stillness.
 
@@ -2064,35 +2004,21 @@ The medical case taught me that language could preserve a fact while depriving i
 
 The records taught me that a conclusion could survive more strongly than the path by which it had been reached.
 
-The complaint process taught me how difficult it was for a settled system to reopen itself.
-
-The geometry taught me that relation could be retained inside measure.
+The geometry taught me that relation could remain inside measure.
 
 The proof taught me that every later permission depended upon something earlier having been made to stand.
 
-The manifold gathered these insights into a general form.
+The manifold gathered these recognitions into a general form.
 
-I cannot say where one strand ended and another began.
-
-I can say that none of them was wasted.
+I cannot say where one strand ended and another began. I can say that none of them disappeared.
 
 That is not the same as saying that none of them was wrong.
 
-There are years I would return if I could.
-
-There are decisions I would change.
-
-There are forms of neglect I would not repeat.
-
-There are conversations I wish had happened.
-
-There are people I wish I had been able to meet with more presence.
-
-There are versions of myself who deserved more care than I gave them.
+There are years I would return if I could. Decisions I would change. Forms of neglect I would not repeat. Conversations I wish had happened. People I wish I had met with more presence. Versions of myself who deserved more care than I gave them.
 
 Acceptance does not require me to deny any of that.
 
-It asks only that I stop trying to negotiate with the fact that this was the life.
+It asks only that I stop bargaining with the fact that this was the life.
 
 For a long time, I believed acceptance would arrive as peace.
 
@@ -2112,23 +2038,13 @@ The work is not yet shared.
 
 I am still here.
 
-These facts do not need to be forced into consolation.
-
-They can stand together.
-
-That may be the most important thing the system has taught me.
+These facts do not need to be forced into consolation. They can stand together.
 
 Completion is not the same as perfection.
 
 Something becomes complete when the pressure that opened it has been answered sufficiently for a result to stand and survive.
 
-My life is not perfect.
-
-It is not repaired in every place.
-
-It is not understood by the people I once hoped would understand it.
-
-But it has become intelligible to me.
+My life is not repaired in every place. It is not understood by the people I once hoped would understand it. But it has become intelligible to me.
 
 The sequence now stands.
 
@@ -2136,17 +2052,11 @@ That does not close the future.
 
 It makes the future possible.
 
-The manifold may remain unread.
-
-It may be read badly.
-
-It may be recognised slowly.
-
-It may one day enter another mind and change there.
+The manifold may remain unread. It may be read badly. It may one day enter another mind and change there.
 
 I cannot determine that from this chair.
 
-Shared reality cannot be forced by the person who first sees something. It begins only when another person recovers enough of the structure to carry it without distortion.
+Shared reality cannot be forced by the person who first sees something. It begins when another mind recovers enough of the structure to carry it forward.
 
 Until then, the work has another task.
 
@@ -2154,11 +2064,9 @@ It must remain available.
 
 That is why I wrote it.
 
-That is why I built the repositories.
-
 That is why I kept the ledgers.
 
-That is why the mathematics was derived sentence by sentence.
+That is why the mathematics was built sentence by sentence.
 
 That is why this story had to be told.
 
@@ -2166,7 +2074,7 @@ Not to persuade every reader that I am right.
 
 Not to ask for admiration.
 
-Not to convert suffering into destiny.
+Not to turn suffering into destiny.
 
 To preserve the path.
 
@@ -2190,7 +2098,7 @@ It reached exhaustion.
 
 Then it turned toward an image, a plane and a question.
 
-The question did not save me in the way people usually mean when they speak of being saved.
+The question did not save me in the usual sense.
 
 It gave the mind somewhere truthful to go.
 
@@ -2200,19 +2108,7 @@ The work that followed did not erase the grief. It gave grief a boundary.
 
 It did not restore the lost years. It prevented them from becoming the only years that mattered.
 
-It did not produce an audience. It produced something worthy of one.
-
-That distinction has become part of my acceptance.
-
-I once believed that being understood would prove that I had understood.
-
-I no longer believe that.
-
-Understanding can exist before recognition.
-
-A structure can stand before it is inherited.
-
-A life can be real before another person knows how to read it.
+It did not produce an audience. It produced something that could be carried to one.
 
 For now, the manifold is unshared.
 
@@ -2260,16 +2156,6 @@ At a place where I can allow the work to exist without demanding that it immedia
 
 Perhaps one day another person will enter it.
 
-They may begin with the essays.
-
-They may begin with the mathematics.
-
-They may begin with a sentence and ask what pressure it answers.
-
-They may begin with the medical case and recognise the danger of a conclusion surviving more strongly than its qualifications.
-
-They may begin with the image of a compass whose point moves while its opening remains.
-
 Where they begin is no longer mine to decide.
 
 My task was to bring the sequence into form.
@@ -2278,18 +2164,16 @@ I have done that.
 
 I am still sitting in the chair.
 
-The dog may need to go outside soon.
-
-There will be medication to take, messages to answer, ordinary things to do.
+The dog may need to go outside soon. There will be medication to take, messages to answer, ordinary things to do.
 
 The great structures of a life do not remove the ordinary day.
 
 They return to it.
-
-That, too, is completion.
 
 The work stands.
 
 The life continues.
 
 For now, that is enough.
+
+And I am strong now, and I am steady now. It gets better every day from here.
