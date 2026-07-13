@@ -1,0 +1,24 @@
+name: Update epilogue
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/update-epilogue.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Replace epilogue
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('The Unshared Manifold.md')
+          text = path.read
